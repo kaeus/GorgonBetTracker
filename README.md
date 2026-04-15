@@ -14,6 +14,14 @@ Grab the latest `GorgonBetTracker.exe` from the
 [Releases page](../../releases/latest) and double-click to run. No install
 required — settings and the bet database live next to the exe.
 
+# Example
+
+Here is an example of the overlay and tracking site!
+
+![Overlay](https://raw.githubusercontent.com/kaeus/GorgonBetTracker/refs/heads/main/Overlay.png "Bet Overlay")
+
+![Tracker Website](https://raw.githubusercontent.com/kaeus/GorgonBetTracker/refs/heads/main/BetTracker.png "Bet Tracking Stat Website")
+
 ## Run from source
 
 ```bash
