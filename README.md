@@ -43,14 +43,17 @@ to point at your game install if the defaults are wrong:
   "chat_log_dir": "%LOCALAPPDATA%\\..\\LocalLow\\Elder Game\\Project Gorgon\\ChatLogs",
   "server": "Dreva",
   "project_id": "gorgon-crafting-tools",
-  "stats_port": 8731
+  "stats_port": 8731,
+  "fight_beep_enabled": false
 }
 ```
 
 `%VAR%` environment variables are expanded. `%LOCALAPPDATA%\..\LocalLow` is the
 standard `LocalLow` path on Windows.
 
-Most notable you'll want to change the Server if you are not on Dreva
+Most notable you'll want to change the Server if you are not on Dreva. Set
+`fight_beep_enabled` to `true` if you want a short audible alert when a fight
+starts — it's off by default.
 
 ## Stats page
 

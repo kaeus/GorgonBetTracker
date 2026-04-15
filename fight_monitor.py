@@ -49,6 +49,7 @@ DEFAULT_SETTINGS = {
     "server":              "Dreva",
     "project_id":          "gorgon-crafting-tools",
     "stats_port":          8731,
+    "fight_beep_enabled":  False,
 }
 
 def _load_settings() -> dict:
@@ -78,6 +79,7 @@ CHAT_LOG_DIR        = SETTINGS['chat_log_dir']
 SERVER              = SETTINGS['server']
 PROJECT_ID          = SETTINGS['project_id']
 STATS_PORT          = SETTINGS['stats_port']
+FIGHT_BEEP_ENABLED  = bool(SETTINGS['fight_beep_enabled'])
 
 FIGHTERS = ['Corrak', 'Dura', 'Gloz', 'Leo', 'Otis', 'Ushug', 'Vizlark']
 
@@ -572,7 +574,8 @@ def _schedule_fight_alert(seconds: int):
             f1   = snap['f1'] or '?'
             f2   = snap['f2'] or '?'
             print(f"\n>>> FIGHT STARTING: {f1} vs {f2}! <<<\n")
-            play_fight_sound()
+            if FIGHT_BEEP_ENABLED:
+                play_fight_sound()
         _sound_timer = threading.Timer(seconds, _fire)
         _sound_timer.daemon = True
         _sound_timer.start()
